@@ -1,0 +1,18 @@
+---
+version: '2'
+
+services:
+  obs:
+    image: image-name:tag
+    ports:
+      - 80
+      - 443
+    networks:
+      - obs
+  mariadb:
+    image: mariadb:latest
+    networks:
+      - obs
+
+networks:
+  obs:
